@@ -1,0 +1,29 @@
+
+
+
+first make the node.app with express and an index.hbs file with a form and inputs with proper name attributes, 
+then make a script at the bottom of the page and grab the form and submit button with declarations,
+then make an addEventListener for when you click on the submit button,
+inside the event listener we will use the fetch() api to send the data to the server rest api "app.js" ad console.log it,
+
+    
+    **in app.js, make sure it has this below ↓ for an express body parser to catch the data**
+                    "app.use(express.urlencoded({ extended: false }));"
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    AND..
+                    "app.use(express.json({ extended: false }));"
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
+
+
+
+
+
+
+
+
+

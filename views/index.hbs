@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Powell Web developer</title>
+</head>
+
+<body>
+    <h1>Home</h1>
+
+
+    <form class='theform'>
+        <div class='nameDiv'>
+            <input class='nameInput' name='comment' placeholder='Comment'>
+        </div>
+        <div class="submitDiv">
+            <input class='subNameBtn' type='submit'>
+        </div>
+    </form>
+
+    <div class="landing"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        const theform = document.querySelector('.theform');
+        const subNameBtn = document.querySelector('.subNameBtn');
+
+        subNameBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(theform.comment.value);
+
+            let theComment = theform.comment.value;
+            let body = { comment: theComment };
+            fetch('/comment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body)
+            })
+
+
+
+        })
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
